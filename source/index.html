@@ -1,12 +1,220 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
 
-  </body>
+<body class="page__body">
+  <header class="page-header">
+    <a href="#" class="page-header__logo">
+      <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a href="#">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Приложение PINK</h1>
+
+    <section class="downloads">
+      <h2 class="visually-hidden">Раздел для скачивания приложения Pink</h2>
+      <div class="downloads__wrapper">
+        <h3 class="downloads__title">Взгляните на жизнь иначе!</h3>
+        <a class="button download__button" href="#"></a>
+        <ul class="platform-list">
+          <li class="platform__item platform__item--ios"></li>
+          <li class="platform__item platform__item--android"></li>
+          <li class="platform__item platform__item--win"></li>
+        </ul>
+        <div class="platform-list__text">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 10
+        </div>
+      </div>
+    </section>
+
+    <section class="abilities">
+      <h2 class="visually-hidden">Возможности приложения Pink</h2>
+      <div class="abilities__wrapper">
+        <h3 class="abilities__title">
+          Устали от серости мегаполиса?
+          Нам есть, что вам предложить!
+        </h3>
+        <ul class="abilities-list">
+          <li class="abilities-item">
+            <h4 class="abilities-item__title">Поднимает настроение</h4>
+            <p class="abilities-item__text">
+              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+            </p>
+          </li>
+          <li class="abilities-item">
+            <h4 class="abilities-item__title">Меняет мир вокруг</h4>
+            <p class="abilities-item__text">
+              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            </p>
+          </li>
+          <li class="abilities-item">
+            <h4 class="abilities-item__title">Заводит новых друзей </h4>
+            <p class="abilities-item__text">
+              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="science">
+      <!-- Добавить блок с исследованием, после вёрски мобайл -->
+    </section>
+
+    <section class="reviews">
+      <h2 class="visually-hidden">Отзывы о приложении Pink</h2>
+      <div class="reviews-wrapper slider">
+        <ul class="review-list slider-list">
+          <li class="review-item slider-item">
+            <div class="review__author-info">
+              <div class="review__author-name">Николай Петров</div>
+              <div class="review__author-info">25 лет, водитель трамвая</div>
+            </div>
+            <p class="review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+              серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </li>
+          <li class="review-item slider-item">
+            <div class="review__author-info">
+              <div class="review__author-name">Анатолий Иванов</div>
+              <div class="review__author-info">29 лет, бухгалтер</div>
+            </div>
+            <p class="review-text">«Я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+              Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!»</p>
+          </li>
+          <li class="review-item slider-item">
+            <div class="review__author-info">
+              <div class="review__author-name">Николай Петров</div>
+              <div class="review__author-info">25 лет, водитель трамвая</div>
+            </div>
+            <p class="review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+              серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </li>
+        </ul>
+      </div>
+      <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+      <button class="reviews__next" type="button">Следующий отзыв</button>
+      <div class="reviews-toggles silder-toggles">
+        <button class="slider__toggle slider__toggle--active">1</button>
+        <button class="slider__toggle">2</button>
+        <button class="slider__toggle">3</button>
+      </div>
+    </section>
+
+    <section class="plan">
+      <h2 class="visually-hidden">Тарифные планы</h2>
+      <table class="plan-table">
+        <tr class="plan-table__tr">
+          <!-- <th class="plan-table__th--empty"></th> -->
+          <th class="plan-table__th">
+            <p class="plan-table__plan-title">База</p>
+            <p class="plan-table__plan-price">1,99 USD</p>
+          </th>
+          <th class="plan-table__th plan-table__th--hit">
+            <p class="plan-table__plan-title">СТАНДАРТ </p>
+            <p class="plan-table__plan-price">3,99 USD</p>
+          </th>
+          <th class="plan-table__th">
+            <p class="plan-table__plan-title">АНЛИМ</p>
+            <p class="plan-table__plan-price">9,99 USD</p>
+          </th>
+        </tr>
+        <tr class="plan-table__tr">
+          <td class="plan-table__td plan-table__td--available">Розовый фильтр</td>
+          <td class="plan-table__td plan-table__td--available">Розовый фильтр</td>
+          <td class="plan-table__td plan-table__td--available">Розовый фильтр</td>
+        </tr>
+        <tr class="plan-table__tr">
+          <td class="plan-table__td plan-table__td--not-available">Смайлики</td>
+          <td class="plan-table__td plan-table__td--available">Смайлики</td>
+          <td class="plan-table__td plan-table__td--available">Смайлики</td>
+        </tr>
+        <tr class="plan-table__tr">
+          <td class="plan-table__td plan-table__td--not-available">Комментарии</td>
+          <td class="plan-table__td plan-table__td--not-available">Комментарии</td>
+          <td class="plan-table__td plan-table__td--available">Комментарии</td>
+        </tr>
+      </table>
+      <div class="plan-toggles">
+        <button class="plan__toggle plan__toggle--active">1</button>
+        <button class="plan__toggle">2</button>
+        <button class="plas__toggle">3</button>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="contact__wrapper">
+        <h3 class="contact-title">Остались вопросы? Свяжитесь с нами!</h3>
+        <div class="contact-tel">
+          <p class="contact-tel__title">Звоните:</p>
+          <p class="contact-tel__info">+7 (812) 555-66-66</p>
+        </div>
+        <div class="contact-mail">
+          <p class="contact-mail__title">Пишите:</p>
+          <p class="contact-mail__info">mail@htmlacademy.ru</p>
+        </div>
+        <div class="contact-addres">
+          <p class="contact-addres__title">Приезжайте в гости:</p>
+          <p class="contact-addres__info">ул. Большая Конюшенная, 19/8</p>
+        </div>
+      </div>
+      <div class="contact__map">
+        <!-- Сюда вставить карту -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__logo">
+        <img src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Лототип приложения Pink">
+      </div>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#">Twitter</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">Facebook</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="#">Youtube</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="#">
+          <img src="img/logo-htmlacademy.svg" width="27" height="54" alt="Логотип">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
