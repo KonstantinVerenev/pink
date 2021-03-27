@@ -1,0 +1,26 @@
+.site-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-list__item {
+  text-align: center;
+  a {
+  padding: 15px 88px;
+  box-sizing: border-box;
+  display: block;
+  background-color: $blue;
+  color: $white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid black;
+  }
+}

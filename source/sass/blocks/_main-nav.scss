@@ -1,0 +1,34 @@
+.main-nav {
+  width: 100%;
+  &--opened {
+    position: absolute;
+    top: 0px;
+  }
+  &--closed {
+    position: absolute;
+    top: -500px;
+  }
+}
+.main-nav_top {
+  padding: 23px 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $blue;
+  border-bottom: 1px solid black;
+}
+.main-nav__toggle {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  overflow: visible;
+  &--close {
+    width: 24px;
+    height: 24px;
+    background-image: url("../../img/icon-menu-cross.svg");
+  }
+}
+
+

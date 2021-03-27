@@ -1,0 +1,46 @@
+.download {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-blue;
+}
+.download-top {
+  box-sizing: border-box;
+  padding: 0 20px;
+  min-height: 462px;
+  background-image: url(../../img/iphone-hand-mobile@1x.png), url(../../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom, center bottom;
+}
+.download-top__title {
+  width: 280px;
+  margin-top: 90px;
+  text-align: center;
+  color: $white;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+}
+.download-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.download__button {
+  width: 280px;
+  padding: 12px 30px;
+  color: $white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: transparent;
+  outline: none;
+  border: 3px solid $white;
+  border-radius: 40px;
+}
+.download-bottom__choose-wrapper {
+  width: 280px;
+  text-align: center;
+}
