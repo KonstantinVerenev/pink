@@ -1,0 +1,31 @@
+.social__list {
+  padding: 0;
+  margin: 0 0 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.social__link {
+  width: 48px;
+  height: 48px;
+  display: block;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  border: 3px solid rgba($blue, 0.1);
+
+  &--twitter {
+    background-image: url("../../img/icon-twitter.svg");
+  }
+
+  &--facebook {
+    background-image: url("../../img/icon-facebook.svg");
+  }
+
+  &--youtube {
+    background-image: url("../../img/icon-youtube.svg");
+  }
+}

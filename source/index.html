@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -12,38 +13,36 @@
 <body class="page__body">
   <header class="page-header">
     <div class="additional-nav">
-      <a href="#" class="page-header__logo">
-        <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="">
-      </a>
-      <button class="main-nav__toggle main-nav__toggle--close" type="button">
+      <a href="#" class="page-header__logo"></a>
+      <button class="additional-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню меню</span>
       </button>
     </div>
     <!-- menu open class: main-nav--opened -->
-    <nav class="main-nav main-nav--closed">
-      <div class="main-nav_top">
-        <a href="#" class="page-header__logo">
-          <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="">
-        </a>
-        <button class="main-nav__toggle main-nav__toggle--close" type="button">
-          <span class="visually-hidden">Закрыть меню</span>
-        </button>
-      </div>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item">
-          <a href="#">Главная</a>
-        </li>
-        <li class="site-list__item">
-          <a href="#">Фотографии</a>
-        </li>
-        <li class="site-list__item">
-          <a href="#">Конкурс</a>
-        </li>
-        <li class="site-list__item">
-          <a href="#">HTML Academy</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="main-nav__wrapper">
+      <nav class="main-nav main-nav--opened">
+        <div class="main-nav_top">
+          <a href="#" class="page-header__logo"></a>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
+        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <section class="download">
       <div class="download-top">
         <h3 class="download-top__title">Взгляните на жизнь иначе!</h3>
@@ -78,7 +77,7 @@
           Устали от серости мегаполиса?
         </h3>
         <h3 class="abilities__title">
-          Нам есть, что вам предложить!
+          Нам есть, что вам<br>предложить!
         </h3>
       </div>
       <ul class="abilities-list">
@@ -104,14 +103,22 @@
     </section>
 
     <section class="science">
-      <!-- Добавить блок с исследованием, после вёрски мобайл -->
+      <div class="science-wrapper">
+        <h4 class="science__title">Эффект на 24 часа!</h4>
+        <p class="science__text">
+          Британские ученые провели исследования
+          и доказали, что положительный эффект
+          от использования приложения длится целые сутки!
+        </p>
+        <a class="science__link" href="#">Узнать больше об исследовании</a>
+      </div>
     </section>
 
     <section class="reviews">
       <h2 class="visually-hidden">Отзывы о приложении Pink</h2>
       <div class="reviews-wrapper slider">
         <ul class="review-list slider-list">
-          <li class="review-item slider-item">
+          <li class="review-item slider-item slider-item--active">
             <div class="review__author-info">
               <div class="review__author-name">Николай Петров</div>
               <div class="review__author-info">25 лет, водитель трамвая</div>
@@ -140,9 +147,9 @@
       <button class="reviews__prev" type="button">Предыдущий отзыв</button>
       <button class="reviews__next" type="button">Следующий отзыв</button>
       <div class="reviews-toggles silder-toggles">
-        <button class="slider__toggle slider__toggle--active">1</button>
-        <button class="slider__toggle">2</button>
-        <button class="slider__toggle">3</button>
+        <button class="slider__toggle slider__toggle--active"></button>
+        <button class="slider__toggle"></button>
+        <button class="slider__toggle"></button>
       </div>
     </section>
 
@@ -151,6 +158,8 @@
       <table class="plan-table">
         <tr class="plan-table__tr">
           <!-- <th class="plan-table__th--empty"></th> -->
+          <th class="plan-table__th--wide">
+          </th>
           <th class="plan-table__th">
             <p class="plan-table__plan-title">База</p>
             <p class="plan-table__plan-price">1,99 USD</p>
@@ -165,16 +174,19 @@
           </th>
         </tr>
         <tr class="plan-table__tr">
+          <td class="plan-table__td--wide">Розовый фильтр</td>
           <td class="plan-table__td plan-table__td--available">Розовый фильтр</td>
           <td class="plan-table__td plan-table__td--available">Розовый фильтр</td>
           <td class="plan-table__td plan-table__td--available">Розовый фильтр</td>
         </tr>
         <tr class="plan-table__tr">
+          <td class="plan-table__td--wide">Смайлики</td>
           <td class="plan-table__td plan-table__td--not-available">Смайлики</td>
           <td class="plan-table__td plan-table__td--available">Смайлики</td>
           <td class="plan-table__td plan-table__td--available">Смайлики</td>
         </tr>
         <tr class="plan-table__tr">
+          <td class="plan-table__td--wide">Комментарии</td>
           <td class="plan-table__td plan-table__td--not-available">Комментарии</td>
           <td class="plan-table__td plan-table__td--not-available">Комментарии</td>
           <td class="plan-table__td plan-table__td--available">Комментарии</td>
@@ -188,8 +200,8 @@
     </section>
 
     <section class="contact">
+      <h3 class="contact-text">Остались вопросы? Свяжитесь с нами!</h3>
       <div class="contact__wrapper">
-        <h3 class="contact-title">Остались вопросы? Свяжитесь с нами!</h3>
         <div class="contact-tel">
           <p class="contact__title">Звоните:</p>
           <p class="contact__info">+7 (812) 555-66-66</p>
@@ -203,9 +215,7 @@
           <p class="contact__info">ул. Большая Конюшенная, 19/8</p>
         </div>
       </div>
-      <div class="contact__map">
-        <!-- Сюда вставить карту -->
-      </div>
+      <div class="contact__map"></div>
     </section>
   </main>
 
@@ -217,13 +227,13 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">Twitter</a>
+            <a class="social__link social__link--twitter" href="#"></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Facebook</a>
+            <a class="social__link social__link--facebook" href="#"></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">Youtube</a>
+            <a class="social__link social__link--youtube" href="#"></a>
           </li>
         </ul>
       </div>

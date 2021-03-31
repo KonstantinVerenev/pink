@@ -5,36 +5,54 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
 }
+
 .platform-list__item:not(:last-child) {
   margin-right: 35px;
 }
+
 .platform-list__item-link {
-  &--ios{
+  &--ios {
     display: block;
     width: 46px;
-    height: 57px  ;
+    height: 57px;
     background-image: url("../../img/logo-apple.svg");
     background-repeat: no-repeat;
   }
-  &--android{
+  &--android {
     display: block;
     width: 43px;
-    height: 47px  ;
+    height: 47px;
     background-image: url("../../img/logo-android.svg");
     background-repeat: no-repeat;
   }
-  &--win{
+  &--win {
     display: block;
     width: 44px;
-    height: 41px  ;
+    height: 41px;
     background-image: url("../../img/logo-microsoft.svg");
     background-repeat: no-repeat;
   }
 }
+
 .platform-list__text {
   color: $white;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

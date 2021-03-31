@@ -1,7 +1,35 @@
+.page-footer {
+  padding: 40px 0;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.page-footer__logo {
+  margin-bottom: 25px;
+}
+
 .page-footer__copyright__text {
   color: $blue;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

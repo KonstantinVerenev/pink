@@ -4,9 +4,21 @@
   justify-content: center;
   align-items: center;
 }
+
 .abilities__title-wrapper {
-  padding: 10px 0;
+  padding: 10px 0 0 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 0 50px 0;
+    margin: 0;
+    width: 588px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 54px;
+  }
 }
+
 .abilities__title {
   width: 280px;
   padding: 0;
@@ -17,34 +29,69 @@
   font-size: 24px;
   line-height: 120%;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 588px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 54px;
+  }
 }
+
 .abilities-list {
   width: 100%;
   margin: 0;
-  padding: 20px 0 300px 0;
+  padding: 45px 0 300px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   list-style: none;
   background-color: $grey;
-  background-image: url(../../img/bg-triangle-white.svg), url(../../img/iphone-screen-mobile@1x.png);
+  background-image: url("../../img/bg-triangle-white.svg"), url("../../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: contain, auto;
   background-position: center top, center bottom;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    align-items: flex-end;
+    background-position: center top, left bottom;
+    padding: 45px 0 20px 0;
+    text-align: left;
+  }
 }
+
 .abilities-item {
   width: 280px;
 }
+
 .abilities-item__title {
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
+
 .abilities-item__text {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+  }
 }

@@ -1,17 +1,66 @@
 .plan {
-  padding-top: 155px;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: $grey;
-  background-image: url(../../img/bg-triangle-white.svg);
+  background-image: url('../../img/bg-triangle-white.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+.plan-table {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    display: table;
+    width: auto;
+    overflow: auto;
+  }
+}
+
 .plan-table__th {
+  min-width: 280px;
   background-color: $blue;
   color: $white;
+
+  @media (min-width: $tablet-width) {
+    min-width: 152px;
+  }
 }
+
+.plan-table__th--wide {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: table-cell;
+    background-color: $grey;
+  }
+}
+
+.plan-table__td--wide {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: table-cell;
+  }
+}
+
 .plan-table__tr {
   background-color: $white;
 }
+
+.plan-table__td {
+  min-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 152px;
+  }
+}
+
 .plan-table__plan-title {
   font-style: normal;
   font-weight: bold;
@@ -19,12 +68,14 @@
   line-height: 30px;
   text-transform: uppercase;
 }
+
 .plan-table__plan-price {
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
 }
+
 .plan__toggle {
   padding: 0;
   width: 12px;
@@ -33,6 +84,7 @@
   border-radius: 50%;
   outline: none;
   border: 3px solid $grey;
+  
   &--active {
     width: 12px;
     height: 12px;

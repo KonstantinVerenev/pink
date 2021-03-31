@@ -6,4 +6,29 @@
   background-color: $transp-black;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  } 
+}
+
+.additional-nav__toggle {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  overflow: visible;
+  width: 50px;
+  height: 24px;
+  background-image: url("../img/icon-menu-burger.svg");
+
+  @media (min-width: $tablet-width) {
+    padding: 34px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+  } 
 }
