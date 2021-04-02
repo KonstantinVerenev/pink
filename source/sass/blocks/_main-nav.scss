@@ -1,5 +1,6 @@
 .main-nav {
   width: 100%;
+  transition: all 0.5s;
 
   &--opened {
     position: absolute;
@@ -10,6 +11,7 @@
   &--closed {
     position: absolute;
     top: -500px;
+    z-index: 200;
   }
 
   @media (min-width: $desktop-width) {
@@ -19,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  } 
+  }
 }
 
 .main-nav__wrapper {
@@ -52,16 +54,18 @@
 }
 
 .main-nav__toggle {
-  padding: 0;
+  padding: 10px;
   margin: 0;
   cursor: pointer;
   background-color: transparent;
   outline: none;
   border: none;
   overflow: visible;
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
   background-image: url("../img/icon-menu-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-width: $desktop-width) {
     display: none;

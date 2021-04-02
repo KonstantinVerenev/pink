@@ -7,6 +7,11 @@
   background-color: $dark-blue;
 }
 
+.download--wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .download-top {
   padding: 0 20px;
   width: 100%;
@@ -42,7 +47,7 @@
     width: 210px;
     margin-top: 210px;
     margin-left: 50%;
-    transform: translate(-135%, 0);
+    transform: translate(-130%, 0);
     font-style: normal;
     font-weight: 300;
     font-size: 40px;
@@ -82,7 +87,7 @@
     position: absolute;
     left: 50%;
     bottom: 0;
-    transform: translate(-110%, -13%);
+    transform: translate(-105%, -13%);
   }
 
   @media (min-width: $desktop-width) {
@@ -105,6 +110,7 @@
   outline: none;
   border: 3px solid $white;
   border-radius: 40px;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 300px;

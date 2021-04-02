@@ -1,14 +1,95 @@
 .science {
-  min-height: 276px;
-  background-image: url("../../img/icon-timer-full.svg");
-  background-repeat: no-repeat;
+  display: none;
+  padding: 50px 0;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    background-color: $grey;
+  }
 }
 
 .science-wrapper {
-  width: 40%;
+  min-height: 276px;
+  position: relative;
+  background-image: url("../../img/icon-timer-full.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.science__title {
+  margin: 35px 0 0 0;
+
+  @media (min-width: $tablet-width) {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.science__text {
+
+  @media (min-width: $tablet-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.science__link {
+  color: $red;
+
+  @media (min-width: $tablet-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.science-info {
+  width: 50%;
   margin-left: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: flex-start;
+  @media (min-width: $desktop-width) {
+    width: 60%;
+  }
 }

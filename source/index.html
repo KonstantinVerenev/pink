@@ -18,9 +18,9 @@
         <span class="visually-hidden">Открыть меню меню</span>
       </button>
     </div>
-    <!-- menu open class: main-nav--opened -->
     <div class="main-nav__wrapper">
-      <nav class="main-nav main-nav--opened">
+      <!-- menu open class: main-nav--opened -->
+      <nav class="main-nav main-nav--closed">
         <div class="main-nav_top">
           <a href="#" class="page-header__logo"></a>
           <button class="main-nav__toggle" type="button">
@@ -72,45 +72,51 @@
 
     <section class="abilities">
       <h2 class="visually-hidden">Возможности приложения Pink</h2>
-      <div class="abilities__title-wrapper">
-        <h3 class="abilities__title">
-          Устали от серости мегаполиса?
-        </h3>
-        <h3 class="abilities__title">
-          Нам есть, что вам<br>предложить!
-        </h3>
+      <div class="abilities-title__wrapper">
+        <div class="abilities-title">
+          <h3 class="abilities-title__item">
+            Устали от серости мегаполиса?
+          </h3>
+          <h3 class="abilities-title__item">
+            Нам есть, что вам<br>предложить!
+          </h3>
+        </div>
       </div>
-      <ul class="abilities-list">
-        <li class="abilities-item">
-          <h4 class="abilities-item__title">Поднимает настроение</h4>
-          <p class="abilities-item__text">
-            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-          </p>
-        </li>
-        <li class="abilities-item">
-          <h4 class="abilities-item__title">Меняет мир вокруг</h4>
-          <p class="abilities-item__text">
-            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-          </p>
-        </li>
-        <li class="abilities-item">
-          <h4 class="abilities-item__title">Заводит новых друзей </h4>
-          <p class="abilities-item__text">
-            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-          </p>
-        </li>
-      </ul>
+      <div class="abilities-desc">
+        <ul class="abilities-list">
+          <li class="abilities-item">
+            <h4 class="abilities-item__title">Поднимает настроение</h4>
+            <p class="abilities-item__text">
+              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+            </p>
+          </li>
+          <li class="abilities-item">
+            <h4 class="abilities-item__title">Меняет мир вокруг</h4>
+            <p class="abilities-item__text">
+              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            </p>
+          </li>
+          <li class="abilities-item">
+            <h4 class="abilities-item__title">Заводит новых друзей </h4>
+            <p class="abilities-item__text">
+              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+            </p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="science">
       <div class="science-wrapper">
-        <h4 class="science__title">Эффект на 24 часа!</h4>
-        <p class="science__text">
-          Британские ученые провели исследования
-          и доказали, что положительный эффект
-          от использования приложения длится целые сутки!
-        </p>
-        <a class="science__link" href="#">Узнать больше об исследовании</a>
+        <div class="science-info">
+          <h4 class="science__title">Эффект на 24 часа!</h4>
+          <p class="science__text">
+            Британские ученые провели исследования
+            и доказали, что положительный эффект
+            от использования приложения длится целые сутки!
+          </p>
+          <a class="science__link" href="#">Узнать больше об исследовании</a>
+        </div>
       </div>
     </section>
 
@@ -215,7 +221,11 @@
           <p class="contact__info">ул. Большая Конюшенная, 19/8</p>
         </div>
       </div>
-      <div class="contact__map"></div>
+      <div class="contact__map">
+        <div class="map-bg"></div>
+        <img class="map-img" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="карта">
+      </div>
+
     </section>
   </main>
 
@@ -246,5 +256,25 @@
     </div>
   </footer>
 </body>
+
+<script>
+  // временный код для кнопки меню
+  let mainNav = document.querySelector('.main-nav');
+  let openButton = document.querySelector('.additional-nav__toggle');
+  let closeButton = document.querySelector('.main-nav__toggle');
+
+  openButton.addEventListener('click', function () {
+    mainNav.classList.remove('main-nav--closed');
+    mainNav.classList.add('main-nav--opened');
+  })
+  closeButton.addEventListener('click', function () {
+    mainNav.classList.remove('main-nav--opened');
+    mainNav.classList.add('main-nav--closed');
+  })
+  //-----------------------------------
+
+  //врменный код для карусели отзывов
+  //---------------------------------
+</script>
 
 </html>
