@@ -48,7 +48,6 @@
 }
 
 .science__text {
-
   @media (min-width: $tablet-width) {
     font-style: normal;
     font-weight: normal;
@@ -89,6 +88,7 @@
   flex-direction: column;
   justify-content: left;
   align-items: flex-start;
+
   @media (min-width: $desktop-width) {
     width: 60%;
   }
