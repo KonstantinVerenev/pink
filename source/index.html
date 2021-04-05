@@ -7,28 +7,50 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper-bundle.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
+
+  <!-- INLINE SPRITE -->
+  <svg style="display: none;">
+    <symbol id="menu-burger" viewBox="0 0 49.945 24.007">
+      <path fill="currentColor"
+        d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z" />
+      <path fill="currentColor"
+        d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z" />
+    </symbol>
+    <symbol id="menu-cross" viewBox="0 0 23.867 23.867">
+      <path fill="currentColor"
+        d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z" />
+    </symbol>
+  </svg>
+  <!-- ---- -->
+
   <header class="page-header">
     <div class="additional-nav">
       <a href="#" class="page-header__logo"></a>
       <button class="additional-nav__toggle" type="button">
+        <svg class="main-nav__burger-icon" width="50" height="24">
+          <use xlink:href="#menu-burger"></use>
+        </svg>
         <span class="visually-hidden">Открыть меню меню</span>
       </button>
     </div>
     <div class="main-nav__wrapper">
-      <!-- menu open class: main-nav--opened -->
       <nav class="main-nav main-nav--closed">
         <div class="main-nav_top">
           <a href="#" class="page-header__logo"></a>
           <button class="main-nav__toggle" type="button">
+            <svg class="main-nav__cross-icon" width="24" height="24">
+              <use xlink:href="#menu-cross"></use>
+            </svg>
             <span class="visually-hidden">Закрыть меню</span>
           </button>
         </div>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a href="#">Главная</a>
           </li>
           <li class="site-list__item">
@@ -52,13 +74,13 @@
         <div class="download-bottom__choose-wrapper">
           <ul class="download-bottom__choose-list platform-list">
             <li class="platform-list__item">
-              <a class="platform-list__item-link--ios" href="#"></a>
+              <a class="platform-list__item-link platform-list__item-link--ios" href="#"></a>
             </li>
             <li class="platform-list__item">
-              <a class="platform-list__item-link--android" href="#"></a>
+              <a class="platform-list__item-link platform-list__item-link--android" href="#"></a>
             </li>
             <li class="platform-list__item">
-              <a class="platform-list__item-link--win" href="#"></a>
+              <a class="platform-list__item-link platform-list__item-link--win" href="#"></a>
             </li>
           </ul>
           <p class="platform-list__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows</p>
@@ -122,49 +144,76 @@
 
     <section class="reviews">
       <h2 class="visually-hidden">Отзывы о приложении Pink</h2>
-      <div class="reviews-wrapper slider">
-        <ul class="review-list slider-list">
-          <li class="review-item slider-item slider-item--active">
-            <div class="review__author-info">
+      <div class="reviews-wrapper slider swiper-container">
+        <div class="slider-list swiper-wrapper">
+          <div class="slider-item swiper-slide">
+            <div class="review__author">
               <div class="review__author-name">Николай Петров</div>
               <div class="review__author-info">25 лет, водитель трамвая</div>
             </div>
             <p class="review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
               серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </li>
-          <li class="review-item slider-item">
-            <div class="review__author-info">
+          </div>
+          <div class="slider-item swiper-slide">
+            <div class="review__author">
               <div class="review__author-name">Анатолий Иванов</div>
               <div class="review__author-info">29 лет, бухгалтер</div>
             </div>
             <p class="review-text">«Я познакомился со своей будущей женой в комментариях к выложенной фотографии!
               Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!»</p>
-          </li>
-          <li class="review-item slider-item">
-            <div class="review__author-info">
+          </div>
+          <div class="slider-item swiper-slide">
+            <div class="review__author">
               <div class="review__author-name">Николай Петров</div>
               <div class="review__author-info">25 лет, водитель трамвая</div>
             </div>
             <p class="review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
               серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-      <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-      <button class="reviews__next" type="button">Следующий отзыв</button>
-      <div class="reviews-toggles silder-toggles">
-        <button class="slider__toggle slider__toggle--active"></button>
-        <button class="slider__toggle"></button>
-        <button class="slider__toggle"></button>
-      </div>
+      <button class="reviews-btn reviews-btn--prev" type="button"></button>
+      <button class="reviews-btn reviews-btn--next" type="button"></button>
+      <div class="swiper-pagination-1 silder-toggles"></div>
     </section>
 
     <section class="plan">
       <h2 class="visually-hidden">Тарифные планы</h2>
+      <div class="plan-slider swiper-container-2">
+        <div class="plan-slider__list swiper-wrapper">
+          <div class="plan-slider__item swiper-slide">
+            <div class="item__header item__header--hit">
+              <p class="header-title">Стандарт</p>
+              <p class="header-price">3,99 USD</p>
+            </div>
+            <div class="plan-option plan-option--available">Розовый фильтр</div>
+            <div class="plan-option plan-option--available">Смайлики</div>
+            <div class="plan-option plan-option--not-available">Комментарии</div>
+          </div>
+          <div class="plan-slider__item swiper-slide">
+            <div class="item__header">
+              <p class="header-title">Анлим</p>
+              <p class="header-price">9,99 USD</p>
+            </div>
+            <div class="plan-option plan-option--available">Розовый фильтр</div>
+            <div class="plan-option plan-option--available">Смайлики</div>
+            <div class="plan-option plan-option--available">Комментарии</div>
+          </div>
+          <div class="plan-slider__item swiper-slide">
+            <div class="item__header">
+              <p class="header-title">База</p>
+              <p class="header-price">1,99 USD</p>
+            </div>
+            <div class="plan-option plan-option--available">Розовый фильтр</div>
+            <div class="plan-option plan-option--not-available">Смайлики</div>
+            <div class="plan-option plan-option--not-available">Комментарии</div>
+          </div>
+        </div>
+      </div>
+      <div class="plan-slider__toggles swiper-pagination-2"></div>
       <table class="plan-table">
         <tr class="plan-table__tr">
-          <!-- <th class="plan-table__th--empty"></th> -->
-          <th class="plan-table__th--wide">
+          <th class="plan-table__th">
           </th>
           <th class="plan-table__th">
             <p class="plan-table__plan-title">База</p>
@@ -180,29 +229,24 @@
           </th>
         </tr>
         <tr class="plan-table__tr">
-          <td class="plan-table__td--wide">Розовый фильтр</td>
-          <td class="plan-table__td plan-table__td--available">Розовый фильтр</td>
-          <td class="plan-table__td plan-table__td--available">Розовый фильтр</td>
-          <td class="plan-table__td plan-table__td--available">Розовый фильтр</td>
+          <td class="plan-table__td">Розовый фильтр</td>
+          <td class="plan-table__td plan-table__td--available"></td>
+          <td class="plan-table__td plan-table__td--available"></td>
+          <td class="plan-table__td plan-table__td--available"></td>
         </tr>
         <tr class="plan-table__tr">
-          <td class="plan-table__td--wide">Смайлики</td>
-          <td class="plan-table__td plan-table__td--not-available">Смайлики</td>
-          <td class="plan-table__td plan-table__td--available">Смайлики</td>
-          <td class="plan-table__td plan-table__td--available">Смайлики</td>
+          <td class="plan-table__td">Смайлики</td>
+          <td class="plan-table__td plan-table__td--not-available"></td>
+          <td class="plan-table__td plan-table__td--available"></td>
+          <td class="plan-table__td plan-table__td--available"></td>
         </tr>
         <tr class="plan-table__tr">
-          <td class="plan-table__td--wide">Комментарии</td>
-          <td class="plan-table__td plan-table__td--not-available">Комментарии</td>
-          <td class="plan-table__td plan-table__td--not-available">Комментарии</td>
-          <td class="plan-table__td plan-table__td--available">Комментарии</td>
+          <td class="plan-table__td">Комментарии</td>
+          <td class="plan-table__td plan-table__td--not-available"></td>
+          <td class="plan-table__td plan-table__td--not-available"></td>
+          <td class="plan-table__td plan-table__td--available"></td>
         </tr>
       </table>
-      <div class="plan-toggles">
-        <button class="plan__toggle"></button>
-        <button class="plan__toggle plan__toggle--active"></button>
-        <button class="plan__toggle"></button>
-      </div>
     </section>
 
     <section class="contact">
@@ -214,7 +258,9 @@
         </div>
         <div class="contact-mail">
           <p class="contact__title">Пишите:</p>
-          <p class="contact__info">mail@htmlacademy.ru</p>
+          <a href="mailto:#">
+            <p class="contact__info">mail@htmlacademy.ru</p>
+          </a>
         </div>
         <div class="contact-addres">
           <p class="contact__title">Приезжайте в гости:</p>
@@ -223,7 +269,7 @@
       </div>
       <div class="contact__map">
         <div class="map-bg"></div>
-        <img class="map-img" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="карта">
+        <div class="map-img"></div>
       </div>
 
     </section>
@@ -257,24 +303,8 @@
   </footer>
 </body>
 
-<script>
-  // временный код для кнопки меню
-  let mainNav = document.querySelector('.main-nav');
-  let openButton = document.querySelector('.additional-nav__toggle');
-  let closeButton = document.querySelector('.main-nav__toggle');
-
-  openButton.addEventListener('click', function () {
-    mainNav.classList.remove('main-nav--closed');
-    mainNav.classList.add('main-nav--opened');
-  })
-  closeButton.addEventListener('click', function () {
-    mainNav.classList.remove('main-nav--opened');
-    mainNav.classList.add('main-nav--closed');
-  })
-  //-----------------------------------
-
-  //врменный код для карусели отзывов
-  //---------------------------------
-</script>
+<script src="/js/top-nav.js"></script>
+<script src="js/swiper-bundle.js"></script>
+<script src="/js/review-slider.js"></script>
 
 </html>

@@ -44,5 +44,19 @@
       text-decoration: none;
       border: none;
     }
+
+    &:hover {
+      color: $red;
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+    }
+  }
+
+  &--active a {
+    @media (min-width: $desktop-width) {
+      border-bottom: 2px solid $white;
+    }
   }
 }

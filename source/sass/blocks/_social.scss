@@ -1,6 +1,6 @@
 .social__list {
   padding: 0;
-  margin: 0 0 25px 0;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,5 +27,18 @@
 
   &--youtube {
     background-image: url("../../img/icon-youtube.svg");
+    background-position: 56% center;
   }
+
+  &:hover {
+    border: 3px solid $blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__item:not(:last-child) {
+  margin-right: 5px;
 }

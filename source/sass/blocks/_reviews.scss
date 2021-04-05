@@ -1,18 +1,31 @@
 .reviews {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-top: 30px;
+  position: relative;
   text-align: center;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 140px;
+    background-image: url("../../img/icon-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: center 45px;
+  }
 }
 
-.review-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.reviews-wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 688px;
+  }
 }
 
 .review__author-name {
+  display: block;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -27,10 +40,19 @@
 }
 
 .review__author-info {
+  display: none;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .review-text {
@@ -45,14 +67,6 @@
     font-size: 18px;
     line-height: 30px;
   }
-}
-
-.reviews__prev {
-  display: none;
-}
-
-.reviews__next {
-  display: none;
 }
 
 .reviews-toggles {

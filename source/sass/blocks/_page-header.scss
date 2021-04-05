@@ -8,16 +8,43 @@
   background-size: auto;
   background-position: center;
 
+  &:hover {
+    background-image: url("../../img/logo-pink-white-mobile-red.svg");
+  }
+
+  &:active {
+    background-image: url("../../img/logo-pink-white-mobile.svg");
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 10px;
     width: 145px;
     height: 40px;
     background-image: url("../../img/logo-pink-white-tablet.svg");
+
+    &:hover {
+      background-image: url("../../img/logo-pink-white-tablet-red.svg");
+    }
+
+    &:active {
+      background-image: url("../../img/logo-pink-white-tablet.svg");
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 147px;
     height: 40px;
     background-image: url("../../img/logo-pink-white-desktop.svg");
+
+    &:hover {
+      background-image: url("../../img/logo-pink-white-desktop-red.svg");
+    }
+
+    &:active {
+      background-image: url("../../img/logo-pink-white-desktop.svg");
+      opacity: 0.3;
+    }
   }
 }

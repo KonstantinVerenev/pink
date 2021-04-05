@@ -67,11 +67,12 @@
 }
 
 .download-bottom__choose-wrapper {
-  margin-bottom: 38px;
+  margin-bottom: 15px;
   width: 280px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
     width: 300px;
   }
 }
@@ -112,12 +113,22 @@
   border-radius: 40px;
   cursor: pointer;
 
+  &:hover {
+    background-color: $white;
+    color: $red;
+  }
+
+  &:active {
+    background-color: $white;
+    color: rgba($red, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     width: 300px;
     margin-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 65px;
+    margin-bottom: 45px;
   }
 }

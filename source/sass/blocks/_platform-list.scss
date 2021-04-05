@@ -7,11 +7,11 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 }
 
@@ -20,28 +20,31 @@
 }
 
 .platform-list__item-link {
+  padding: 5px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
   &--ios {
-    display: block;
     width: 46px;
     height: 57px;
     background-image: url("../../img/logo-apple.svg");
-    background-repeat: no-repeat;
   }
 
   &--android {
-    display: block;
     width: 43px;
     height: 47px;
     background-image: url("../../img/logo-android.svg");
-    background-repeat: no-repeat;
   }
 
   &--win {
-    display: block;
     width: 44px;
     height: 41px;
     background-image: url("../../img/logo-microsoft.svg");
-    background-repeat: no-repeat;
   }
 }
 
