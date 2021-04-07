@@ -5,6 +5,7 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const del = require("del");
 
 sass.compiler = require('node-sass');
 // Styles
@@ -23,6 +24,19 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+const css = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
+
+exports.css = css;
 
 // Server
 
@@ -46,6 +60,33 @@ const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
+
+// Build
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/**",
+    "source/img/**",
+    "source/js/*.js",
+    "source/css/swiper-bundle.css",
+    "source/*.html"
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"));
+}
+
+exports.copy = copy;
+
+const clean = () => {
+  return del("build");
+}
+
+exports.clean = clean;
+
+exports.build = gulp.series(
+  clean, copy, css
+);
 
 exports.default = gulp.series(
   styles, server, watcher

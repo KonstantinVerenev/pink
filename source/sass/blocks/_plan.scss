@@ -2,7 +2,7 @@
   padding-top: 80px;
   padding-bottom: 20px;
   background-color: $grey;
-  background-image: url("../../img/bg-triangle-white.svg");
+  background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -33,7 +33,7 @@
   text-align: center;
 
   &--hit {
-    background-image: url("../../img/hit.png");
+    background-image: url("../img/hit.png");
     background-repeat: no-repeat;
   }
 }
@@ -69,13 +69,13 @@
   text-transform: uppercase;
 
   &--available {
-    background-image: url("../../img/icon-yes.svg");
+    background-image: url("../img/icon-yes.svg");
     background-repeat: no-repeat;
     background-position: 220px;
   }
 
   &--not-available {
-    background-image: url("../../img/icon-no.svg");
+    background-image: url("../img/icon-no.svg");
     background-repeat: no-repeat;
     background-position: 220px;
   }
@@ -109,7 +109,7 @@
   color: $white;
 
   &--hit {
-    background-image: url("../../img/hit.png");
+    background-image: url("../img/hit.png");
     background-repeat: no-repeat;
   }
 }
@@ -160,13 +160,13 @@
 }
 
 .plan-table__td--available {
-  background-image: url("../../img/icon-yes.svg");
+  background-image: url("../img/icon-yes.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .plan-table__td--not-available {
-  background-image: url("../../img/icon-no.svg");
+  background-image: url("../img/icon-no.svg");
   background-repeat: no-repeat;
   background-position: center;
 }

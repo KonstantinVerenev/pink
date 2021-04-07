@@ -56,7 +56,7 @@
     &--prev {
       top: 180px;
       left: calc(50% - 450px);
-      background-image: url("../../img/icon-review-arrow-left.svg");
+      background-image: url("../img/icon-review-arrow-left.svg");
       opacity: 0.3;
 
       &:hover {
@@ -71,7 +71,7 @@
     &--next {
       top: 180px;
       left: calc(50% + 400px);
-      background-image: url("../../img/icon-review-arrow-right.svg");
+      background-image: url("../img/icon-review-arrow-right.svg");
       opacity: 0.3;
 
       &:hover {
